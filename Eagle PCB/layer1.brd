@@ -2739,11 +2739,9 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 </element>
 <element name="RST" library="MY-LIBRARY" library_urn="urn:adsk.eagle:library:11016882" package="MOMENTARY_SWITCH_4X3" package3d_urn="urn:adsk.eagle:package:11016890/3" value="MOMENTARY_SWITCH_4X3" x="84.5" y="22" smashed="yes" rot="R270">
 <attribute name="NAME" x="86.525" y="21.678" size="1.27" layer="25"/>
-<attribute name="VALUE" x="84.052" y="52.502" size="1.27" layer="27" rot="R270"/>
 </element>
 <element name="BOOT" library="MY-LIBRARY" library_urn="urn:adsk.eagle:library:11016882" package="MOMENTARY_SWITCH_4X3" package3d_urn="urn:adsk.eagle:package:11016890/3" value="MOMENTARY_SWITCH_4X3" x="79.5" y="22" smashed="yes" rot="R270">
 <attribute name="NAME" x="72.825" y="21.478" size="1.27" layer="25"/>
-<attribute name="VALUE" x="78.248" y="33.498" size="1.27" layer="27" rot="R90"/>
 </element>
 <element name="U$15" library="MY-LIBRARY" library_urn="urn:adsk.eagle:library:11016882" package="2X7" package3d_urn="urn:adsk.eagle:package:16537177/2" value="CONN_07X2" x="91" y="6" smashed="yes" rot="R270">
 <attribute name="NAME" x="89.764" y="-9.43" size="0.6096" layer="25" font="vector" ratio="20" rot="R270"/>
@@ -2760,6 +2758,18 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <element name="R7" library="JH" library_urn="urn:adsk.eagle:library:6027132" package="R0603" package3d_urn="urn:adsk.eagle:package:15441228/3" value="500k" x="0.6" y="47.9" smashed="yes" rot="MR270">
 <attribute name="NAME" x="-0.162" y="47.9" size="0.7112" layer="26" font="vector" ratio="18" rot="MR270" align="bottom-center"/>
 <attribute name="VALUE" x="1.362" y="47.9" size="0.7112" layer="28" font="vector" ratio="18" rot="MR270" align="top-center"/>
+</element>
+<element name="V_BATT_M1" library="JH" library_urn="urn:adsk.eagle:library:6027132" package="18AWG" package3d_urn="urn:adsk.eagle:package:16754415/1" value="18AWG" x="-113.2" y="-112.5" smashed="yes">
+<attribute name="NAME" x="-114.7" y="-111.2" size="0.6096" layer="25"/>
+</element>
+<element name="V_BATT_M2" library="JH" library_urn="urn:adsk.eagle:library:6027132" package="18AWG" package3d_urn="urn:adsk.eagle:package:16754415/1" value="18AWG" x="-113.2" y="-115.8" smashed="yes">
+<attribute name="NAME" x="-114.7" y="-114.5" size="0.6096" layer="25"/>
+</element>
+<element name="V_BATT_M3" library="JH" library_urn="urn:adsk.eagle:library:6027132" package="18AWG" package3d_urn="urn:adsk.eagle:package:16754415/1" value="18AWG" x="-113.2" y="-119.1" smashed="yes">
+<attribute name="NAME" x="-114.7" y="-117.8" size="0.6096" layer="25"/>
+</element>
+<element name="V_BATT_M4" library="JH" library_urn="urn:adsk.eagle:library:6027132" package="18AWG" package3d_urn="urn:adsk.eagle:package:16754415/1" value="18AWG" x="-113.2" y="-122.4" smashed="yes">
+<attribute name="NAME" x="-114.7" y="-121.1" size="0.6096" layer="25"/>
 </element>
 </elements>
 <signals>
@@ -2877,6 +2887,14 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="31.8" y1="-35.2" x2="32.81968125" y2="-36.21968125" width="1.016" layer="1"/>
 <wire x1="32.81968125" y1="-36.21968125" x2="36.28778125" y2="-36.21968125" width="1.016" layer="1"/>
 <wire x1="37.9681" y1="-37.9" x2="55.7924125" y2="-37.9" width="1.016" layer="1"/>
+<contactref element="V_BATT_M1" pad="P$1"/>
+<contactref element="V_BATT_M4" pad="P$1"/>
+<contactref element="V_BATT_M2" pad="P$1"/>
+<contactref element="V_BATT_M3" pad="P$1"/>
+<wire x1="-113.2" y1="-119.1" x2="-113.2" y2="-122.4" width="0" layer="19" extent="1-1"/>
+<wire x1="-113.2" y1="-115.8" x2="-113.2" y2="-119.1" width="0" layer="19" extent="1-1"/>
+<wire x1="-113.2" y1="-112.5" x2="-113.2" y2="-115.8" width="0" layer="19" extent="1-1"/>
+<wire x1="-80.173" y1="-6.612" x2="-113.2" y2="-112.5" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="GND">
 <contactref element="1C1" pad="2"/>
