@@ -618,7 +618,7 @@
 <pad name="P$27" x="-1" y="-3.669" drill="0.381"/>
 <pad name="P$28" x="-2" y="-3.669" drill="0.381"/>
 </package>
-<package name="XT30PB-F" urn="urn:adsk.eagle:footprint:15925141/5" library_version="160">
+<package name="XT30PB-F" urn="urn:adsk.eagle:footprint:15925141/6" library_version="161">
 <wire x1="-5.1" y1="-2.8" x2="-5.1" y2="2.8" width="0.127" layer="21"/>
 <wire x1="3.81" y1="2.794" x2="5.1" y2="1.27" width="0.127" layer="21"/>
 <wire x1="5.1" y1="-1.27" x2="3.81" y2="-2.794" width="0.127" layer="21"/>
@@ -628,8 +628,8 @@
 <wire x1="5.588" y1="0" x2="6.096" y2="0" width="0.127" layer="21"/>
 <wire x1="-5.588" y1="0" x2="-6.096" y2="0" width="0.127" layer="21"/>
 <wire x1="-5.842" y1="0.254" x2="-5.842" y2="-0.254" width="0.127" layer="21"/>
-<pad name="+" x="-2.5" y="0" drill="2.1"/>
-<pad name="-" x="2.5" y="0" drill="2.1"/>
+<pad name="+" x="-2.5" y="0" drill="2"/>
+<pad name="-" x="2.5" y="0" drill="2"/>
 <text x="-5.08" y="3.175" size="1.27" layer="25">&gt;Name</text>
 </package>
 <package name="XT30PW-F" urn="urn:adsk.eagle:footprint:16702936/4" library_version="124">
@@ -883,7 +883,7 @@ www.fma.fujitsu.com/pdf/e713717.pdf</description>
 <packageinstance name="POWERSO-30"/>
 </packageinstances>
 </package3d>
-<package3d name="XT30UPB-F" urn="urn:adsk.eagle:package:15925142/6" type="model" library_version="160">
+<package3d name="XT30UPB-F" urn="urn:adsk.eagle:package:15925142/7" type="model" library_version="161">
 <packageinstances>
 <packageinstance name="XT30PB-F"/>
 </packageinstances>
@@ -1506,7 +1506,7 @@ Diode with low voltage drop</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="XT30" urn="urn:adsk.eagle:component:15925143/8" prefix="J" library_version="160">
+<deviceset name="XT30" urn="urn:adsk.eagle:component:15925143/9" prefix="J" library_version="161">
 <gates>
 <gate name="G$1" symbol="POWER_CONSORT" x="0" y="0"/>
 </gates>
@@ -1517,7 +1517,7 @@ Diode with low voltage drop</description>
 <connect gate="G$1" pin="P$V-" pad="-"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:15925142/6"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:15925142/7"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -1672,6 +1672,13 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <text x="0" y="-0.254" size="1.778" layer="96" align="top-center">&gt;VALUE</text>
 <pin name="AGND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
 </symbol>
+<symbol name="5V">
+<description>&lt;h3&gt;5V Voltage Supply&lt;/h3&gt;</description>
+<wire x1="0.762" y1="1.27" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="-0.762" y2="1.27" width="0.254" layer="94"/>
+<pin name="5V" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
+<text x="0" y="2.794" size="1.778" layer="96" align="bottom-center">&gt;VALUE</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="V_BATT" prefix="SUPPLY">
@@ -1735,6 +1742,20 @@ You are welcome to use this library for commercial purposes. For attribution, we
 &lt;p&gt;Generic symbol for a analog ground supply.&lt;/p&gt;</description>
 <gates>
 <gate name="G$1" symbol="AGND" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="5V" prefix="SUPPLY">
+<description>&lt;h3&gt;5V Supply Symbol&lt;/h3&gt;
+&lt;p&gt;Power supply symbol for a specifically-stated 5V source.&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="5V" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -7315,6 +7336,70 @@ USE AT YOUR OWN RISK!&lt;p&gt;
 </deviceset>
 </devicesets>
 </library>
+<library name="SparkFun-Aesthetics">
+<description>&lt;h3&gt;SparkFun Aesthetics&lt;/h3&gt;
+This library contiains non-functional items such as logos, build/ordering notes, frame blocks, etc. 
+&lt;br&gt;
+&lt;br&gt;
+We've spent an enormous amount of time creating and checking these footprints and parts, but it is &lt;b&gt; the end user's responsibility&lt;/b&gt; to ensure correctness and suitablity for a given componet or application. 
+&lt;br&gt;
+&lt;br&gt;If you enjoy using this library, please buy one of our products at &lt;a href=" www.sparkfun.com"&gt;SparkFun.com&lt;/a&gt;.
+&lt;br&gt;
+&lt;br&gt;
+&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
+&lt;br&gt;
+&lt;br&gt;
+You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
+<packages>
+</packages>
+<symbols>
+<symbol name="FR-A4L">
+<description>&lt;h3&gt;Schematic Frame - A4L - European Format&lt;/h3&gt;
+&lt;p&gt;Standard A4 size frame in Landscape&lt;/p&gt;
+&lt;p&gt;Devices using:
+&lt;ul&gt;&lt;li&gt;FRAME-A4L&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;</description>
+<rectangle x1="178.7652" y1="0" x2="179.3748" y2="20.32" layer="94"/>
+<rectangle x1="225.7552" y1="-26.67" x2="226.3648" y2="67.31" layer="94" rot="R90"/>
+<wire x1="225.29" y1="-0.1" x2="225.29" y2="5.08" width="0.1016" layer="94"/>
+<wire x1="225.29" y1="5.08" x2="273.05" y2="5.08" width="0.1016" layer="94"/>
+<wire x1="225.29" y1="5.08" x2="179.07" y2="5.08" width="0.1016" layer="94"/>
+<wire x1="179.07" y1="10.16" x2="225.29" y2="10.16" width="0.1016" layer="94"/>
+<wire x1="225.29" y1="10.16" x2="273.05" y2="10.16" width="0.1016" layer="94"/>
+<wire x1="179.07" y1="15.24" x2="273.05" y2="15.24" width="0.1016" layer="94"/>
+<wire x1="225.29" y1="5.08" x2="225.29" y2="10.16" width="0.1016" layer="94"/>
+<wire x1="179.07" y1="19.05" x2="179.07" y2="20.32" width="0.6096" layer="94"/>
+<wire x1="179.07" y1="20.32" x2="180.34" y2="20.32" width="0.6096" layer="94"/>
+<text x="181.61" y="11.43" size="2.54" layer="94" font="vector">&gt;DRAWING_NAME</text>
+<text x="181.61" y="6.35" size="2.286" layer="94" font="vector">&gt;LAST_DATE_TIME</text>
+<text x="195.58" y="1.27" size="2.54" layer="94" font="vector">&gt;SHEET</text>
+<text x="181.61" y="1.27" size="2.54" layer="94" font="vector">Sheet:</text>
+<text x="181.61" y="16.51" size="2.54" layer="94" font="vector">&gt;CNAME</text>
+<text x="226.16" y="1.27" size="2.54" layer="94" font="vector">Rev:</text>
+<text x="226.26" y="6.35" size="2.54" layer="94" font="vector">&gt;DESIGNER</text>
+<text x="234.92" y="1.17" size="2.54" layer="94" font="vector">&gt;CREVISION</text>
+<frame x1="-3.81" y1="-3.81" x2="276.86" y2="182.88" columns="8" rows="5" layer="94"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="FRAME-A4L" prefix="FRAME">
+<description>&lt;h3&gt;Schematic Frame - A4L - European Format&lt;/h3&gt;
+&lt;p&gt;Standard A4 size frame in Landscape&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="FR-A4L" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name="">
+<attribute name="DESIGNER" value="" constant="no"/>
+<attribute name="REV" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -7557,10 +7642,10 @@ USE AT YOUR OWN RISK!&lt;p&gt;
 <part name="GND17" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="S3" library="SparkFun-Switches" library_urn="urn:adsk.eagle:library:11044690" deviceset="SWITCH-SPDT" device="-PTH-11.6X4.0MM-LOCK" package3d_urn="urn:adsk.eagle:package:11044812/2"/>
 <part name="GND37" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="M1J1" library="JH" library_urn="urn:adsk.eagle:library:6027132" deviceset="XT30" device="PB-F" package3d_urn="urn:adsk.eagle:package:15925142/6"/>
-<part name="M2J1" library="JH" library_urn="urn:adsk.eagle:library:6027132" deviceset="XT30" device="PB-F" package3d_urn="urn:adsk.eagle:package:15925142/6"/>
-<part name="M3J1" library="JH" library_urn="urn:adsk.eagle:library:6027132" deviceset="XT30" device="PB-F" package3d_urn="urn:adsk.eagle:package:15925142/6"/>
-<part name="M4J1" library="JH" library_urn="urn:adsk.eagle:library:6027132" deviceset="XT30" device="PB-F" package3d_urn="urn:adsk.eagle:package:15925142/6"/>
+<part name="M1J1" library="JH" library_urn="urn:adsk.eagle:library:6027132" deviceset="XT30" device="PB-F" package3d_urn="urn:adsk.eagle:package:15925142/7"/>
+<part name="M2J1" library="JH" library_urn="urn:adsk.eagle:library:6027132" deviceset="XT30" device="PB-F" package3d_urn="urn:adsk.eagle:package:15925142/7"/>
+<part name="M3J1" library="JH" library_urn="urn:adsk.eagle:library:6027132" deviceset="XT30" device="PB-F" package3d_urn="urn:adsk.eagle:package:15925142/7"/>
+<part name="M4J1" library="JH" library_urn="urn:adsk.eagle:library:6027132" deviceset="XT30" device="PB-F" package3d_urn="urn:adsk.eagle:package:15925142/7"/>
 <part name="GND_M2A" library="JH" library_urn="urn:adsk.eagle:library:6027132" deviceset="18AWG" device="" package3d_urn="urn:adsk.eagle:package:16754415/1"/>
 <part name="GND_M4A" library="JH" library_urn="urn:adsk.eagle:library:6027132" deviceset="18AWG" device="" package3d_urn="urn:adsk.eagle:package:16754415/1"/>
 <part name="GND_M2B" library="JH" library_urn="urn:adsk.eagle:library:6027132" deviceset="18AWG" device="" package3d_urn="urn:adsk.eagle:package:16754415/1"/>
@@ -7630,6 +7715,24 @@ USE AT YOUR OWN RISK!&lt;p&gt;
 <part name="V_BATT_M2B" library="JH" library_urn="urn:adsk.eagle:library:6027132" deviceset="18AWG" device="" package3d_urn="urn:adsk.eagle:package:16754415/1"/>
 <part name="V_BATT_M3B" library="JH" library_urn="urn:adsk.eagle:library:6027132" deviceset="18AWG" device="" package3d_urn="urn:adsk.eagle:package:16754415/1"/>
 <part name="V_BATT_M4B" library="JH" library_urn="urn:adsk.eagle:library:6027132" deviceset="18AWG" device="" package3d_urn="urn:adsk.eagle:package:16754415/1"/>
+<part name="FRAME2" library="SparkFun-Aesthetics" deviceset="FRAME-A4L" device=""/>
+<part name="SUPPLY3" library="SparkFun-PowerSymbols" deviceset="V_BATT" device=""/>
+<part name="GND16" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
+<part name="SUPPLY22" library="SparkFun-PowerSymbols" deviceset="V_BATT" device=""/>
+<part name="1C6" library="JH" library_urn="urn:adsk.eagle:library:6027132" deviceset="CAPACITOR" device="0603" package3d_urn="urn:adsk.eagle:package:15441226/3" value="4.7uF"/>
+<part name="U2" library="JH" library_urn="urn:adsk.eagle:library:6027132" deviceset="TPS54X0" device="" package3d_urn="urn:adsk.eagle:package:6740528/11"/>
+<part name="1D2" library="JH" library_urn="urn:adsk.eagle:library:6027132" deviceset="DIODE-SCHOTTKY" device="" package3d_urn="urn:adsk.eagle:package:15924797/2" value="SS54"/>
+<part name="GND24" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
+<part name="1L2" library="JH" library_urn="urn:adsk.eagle:library:6027132" deviceset="INDUCTOR" device="SWPA8040" package3d_urn="urn:adsk.eagle:package:15402033/4" value="10uH"/>
+<part name="1R3" library="JH" library_urn="urn:adsk.eagle:library:6027132" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:15441228/3" value="10k"/>
+<part name="1R4" library="JH" library_urn="urn:adsk.eagle:library:6027132" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:15441228/3" value="3.24k"/>
+<part name="1C7" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:11008151" deviceset="100UF-POLAR" device="-EIA7343-10V-10%(TANT)" package3d_urn="urn:adsk.eagle:package:11008199/2" value="220uF"/>
+<part name="1C8" library="JH" library_urn="urn:adsk.eagle:library:6027132" deviceset="CAPACITOR" device="0603" package3d_urn="urn:adsk.eagle:package:15441226/3" value="10nF"/>
+<part name="GND38" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
+<part name="1C9" library="JH" library_urn="urn:adsk.eagle:library:6027132" deviceset="CAPACITOR" device="0603" package3d_urn="urn:adsk.eagle:package:15441226/3" value="0.1uF"/>
+<part name="SUPPLY28" library="SparkFun-PowerSymbols" deviceset="5V" device=""/>
+<part name="BATT" library="JH" library_urn="urn:adsk.eagle:library:6027132" deviceset="XT30" device="PB-F" package3d_urn="urn:adsk.eagle:package:15925142/7"/>
+<part name="1C10" library="JH" library_urn="urn:adsk.eagle:library:6027132" deviceset="CAPACITOR" device="1210" package3d_urn="urn:adsk.eagle:package:15441227/3" value="22uF"/>
 </parts>
 <sheets>
 <sheet>
@@ -11353,6 +11456,185 @@ USE AT YOUR OWN RISK!&lt;p&gt;
 <wire x1="-101.6" y1="17.78" x2="-88.9" y2="17.78" width="0.1524" layer="91"/>
 <pinref part="U$15" gate="G$1" pin="12"/>
 <label x="-101.6" y="17.78" size="1.778" layer="95"/>
+</segment>
+</net>
+</nets>
+</sheet>
+<sheet>
+<description>Layer 2 PSU</description>
+<plain>
+<text x="66.04" y="101.6" size="5.08" layer="91">5V BUCK</text>
+</plain>
+<instances>
+<instance part="FRAME2" gate="G$1" x="5.08" y="7.62" smashed="yes">
+<attribute name="DRAWING_NAME" x="186.69" y="19.05" size="2.54" layer="94" font="vector"/>
+<attribute name="LAST_DATE_TIME" x="186.69" y="13.97" size="2.286" layer="94" font="vector"/>
+<attribute name="SHEET" x="200.66" y="8.89" size="2.54" layer="94" font="vector"/>
+<attribute name="DESIGNER" x="231.34" y="13.97" size="2.54" layer="94" font="vector"/>
+</instance>
+<instance part="SUPPLY3" gate="G$1" x="210.82" y="137.16" smashed="yes">
+<attribute name="VALUE" x="210.82" y="139.954" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="GND16" gate="1" x="210.82" y="119.38" smashed="yes">
+<attribute name="VALUE" x="210.82" y="119.126" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="SUPPLY22" gate="G$1" x="50.8" y="149.86" smashed="yes">
+<attribute name="VALUE" x="50.8" y="152.654" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="1C6" gate="G$1" x="50.8" y="142.24" smashed="yes">
+<attribute name="NAME" x="52.324" y="144.78" size="1.778" layer="95" font="vector" align="center-left"/>
+<attribute name="VALUE" x="52.324" y="139.7" size="1.778" layer="96" font="vector" align="center-left"/>
+</instance>
+<instance part="U2" gate="G$1" x="81.28" y="142.24" smashed="yes">
+<attribute name="NAME" x="81.28" y="151.384" size="1.397" layer="95" font="vector" ratio="12" align="center"/>
+<attribute name="VALUE" x="81.28" y="133.35" size="1.143" layer="96" font="vector" ratio="13" align="center"/>
+</instance>
+<instance part="1D2" gate="G$1" x="101.6" y="124.46" smashed="yes" rot="R90">
+<attribute name="NAME" x="99.568" y="121.92" size="1.778" layer="95" font="vector" rot="R90"/>
+<attribute name="VALUE" x="103.632" y="121.92" size="1.778" layer="96" font="vector" rot="R90" align="top-left"/>
+</instance>
+<instance part="GND24" gate="1" x="71.12" y="129.54" smashed="yes">
+<attribute name="VALUE" x="71.12" y="129.286" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="1L2" gate="L1" x="116.84" y="142.24" smashed="yes" rot="R90">
+<attribute name="NAME" x="121.92" y="140.97" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="121.92" y="146.05" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="1R3" gate="G$1" x="129.54" y="134.62" smashed="yes" rot="R90">
+<attribute name="NAME" x="128.016" y="134.62" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
+<attribute name="VALUE" x="131.064" y="134.62" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
+</instance>
+<instance part="1R4" gate="G$1" x="129.54" y="124.46" smashed="yes" rot="R90">
+<attribute name="NAME" x="128.016" y="124.46" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
+<attribute name="VALUE" x="131.064" y="124.46" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
+</instance>
+<instance part="1C7" gate="G$1" x="139.7" y="132.08" smashed="yes">
+<attribute name="NAME" x="140.716" y="132.715" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="140.716" y="127.889" size="1.778" layer="96" font="vector"/>
+</instance>
+<instance part="1C8" gate="G$1" x="101.6" y="147.32" smashed="yes">
+<attribute name="NAME" x="103.124" y="149.86" size="1.778" layer="95" font="vector" align="center-left"/>
+<attribute name="VALUE" x="103.124" y="144.78" size="1.778" layer="96" font="vector" align="center-left"/>
+</instance>
+<instance part="GND38" gate="1" x="101.6" y="116.84" smashed="yes">
+<attribute name="VALUE" x="101.6" y="116.586" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="1C9" gate="G$1" x="149.86" y="132.08" smashed="yes">
+<attribute name="NAME" x="151.384" y="134.62" size="1.778" layer="95" font="vector" align="center-left"/>
+<attribute name="VALUE" x="151.384" y="129.54" size="1.778" layer="96" font="vector" align="center-left"/>
+</instance>
+<instance part="SUPPLY28" gate="G$1" x="129.54" y="147.32" smashed="yes">
+<attribute name="VALUE" x="129.54" y="150.114" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="BATT" gate="G$1" x="210.82" y="129.54" smashed="yes">
+<attribute name="NAME" x="207.518" y="124.46" size="1.778" layer="95" font="vector" rot="R90"/>
+<attribute name="VALUE" x="215.9" y="124.46" size="1.778" layer="95" font="vector" rot="R90"/>
+</instance>
+<instance part="1C10" gate="G$1" x="63.5" y="142.24" smashed="yes">
+<attribute name="NAME" x="65.024" y="144.78" size="1.778" layer="95" font="vector" align="center-left"/>
+<attribute name="VALUE" x="65.024" y="139.7" size="1.778" layer="96" font="vector" align="center-left"/>
+</instance>
+</instances>
+<busses>
+</busses>
+<nets>
+<net name="V_BATT" class="0">
+<segment>
+<pinref part="SUPPLY22" gate="G$1" pin="V_BATT"/>
+<wire x1="50.8" y1="149.86" x2="50.8" y2="147.32" width="0.1524" layer="91"/>
+<pinref part="1C6" gate="G$1" pin="1"/>
+<junction x="50.8" y="147.32"/>
+<pinref part="U2" gate="G$1" pin="VIN"/>
+<wire x1="50.8" y1="147.32" x2="63.5" y2="147.32" width="0.1524" layer="91"/>
+<pinref part="1C10" gate="G$1" pin="1"/>
+<wire x1="63.5" y1="147.32" x2="71.12" y2="147.32" width="0.1524" layer="91"/>
+<junction x="63.5" y="147.32"/>
+</segment>
+<segment>
+<pinref part="SUPPLY3" gate="G$1" pin="V_BATT"/>
+<pinref part="BATT" gate="G$1" pin="P$V+"/>
+</segment>
+</net>
+<net name="GND" class="0">
+<segment>
+<pinref part="1C6" gate="G$1" pin="2"/>
+<pinref part="U2" gate="G$1" pin="GND"/>
+<wire x1="50.8" y1="137.16" x2="63.5" y2="137.16" width="0.1524" layer="91"/>
+<pinref part="GND24" gate="1" pin="GND"/>
+<wire x1="63.5" y1="137.16" x2="71.12" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="137.16" x2="71.12" y2="132.08" width="0.1524" layer="91"/>
+<junction x="71.12" y="137.16"/>
+<pinref part="1C10" gate="G$1" pin="2"/>
+<junction x="63.5" y="137.16"/>
+</segment>
+<segment>
+<pinref part="1D2" gate="G$1" pin="A"/>
+<pinref part="GND38" gate="1" pin="GND"/>
+<wire x1="101.6" y1="119.38" x2="101.6" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="119.38" x2="129.54" y2="119.38" width="0.1524" layer="91"/>
+<junction x="101.6" y="119.38"/>
+<pinref part="1R4" gate="G$1" pin="1"/>
+<pinref part="1C7" gate="G$1" pin="-"/>
+<wire x1="139.7" y1="127" x2="139.7" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="119.38" x2="129.54" y2="119.38" width="0.1524" layer="91"/>
+<junction x="129.54" y="119.38"/>
+<pinref part="1C9" gate="G$1" pin="2"/>
+<wire x1="149.86" y1="127" x2="149.86" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="119.38" x2="139.7" y2="119.38" width="0.1524" layer="91"/>
+<junction x="139.7" y="119.38"/>
+</segment>
+<segment>
+<pinref part="GND16" gate="1" pin="GND"/>
+<pinref part="BATT" gate="G$1" pin="P$V-"/>
+</segment>
+</net>
+<net name="N$3" class="0">
+<segment>
+<pinref part="U2" gate="G$1" pin="PH"/>
+<pinref part="1C8" gate="G$1" pin="2"/>
+<wire x1="91.44" y1="142.24" x2="101.6" y2="142.24" width="0.1524" layer="91"/>
+<pinref part="1D2" gate="G$1" pin="C"/>
+<wire x1="101.6" y1="142.24" x2="101.6" y2="127" width="0.1524" layer="91"/>
+<junction x="101.6" y="142.24"/>
+<wire x1="101.6" y1="142.24" x2="109.22" y2="142.24" width="0.1524" layer="91"/>
+<pinref part="1L2" gate="L1" pin="1"/>
+</segment>
+</net>
+<net name="N$5" class="0">
+<segment>
+<pinref part="1R3" gate="G$1" pin="1"/>
+<pinref part="1R4" gate="G$1" pin="2"/>
+<wire x1="109.22" y1="129.54" x2="129.54" y2="129.54" width="0.1524" layer="91"/>
+<junction x="129.54" y="129.54"/>
+<pinref part="U2" gate="G$1" pin="VSNS"/>
+<wire x1="91.44" y1="137.16" x2="109.22" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="137.16" x2="109.22" y2="129.54" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$6" class="0">
+<segment>
+<pinref part="U2" gate="G$1" pin="BOOT"/>
+<pinref part="1C8" gate="G$1" pin="1"/>
+<wire x1="91.44" y1="147.32" x2="91.44" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="152.4" x2="101.6" y2="152.4" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="5V" class="0">
+<segment>
+<pinref part="1C7" gate="G$1" pin="+"/>
+<wire x1="139.7" y1="142.24" x2="139.7" y2="134.62" width="0.1524" layer="91"/>
+<pinref part="1L2" gate="L1" pin="2"/>
+<wire x1="124.46" y1="142.24" x2="129.54" y2="142.24" width="0.1524" layer="91"/>
+<pinref part="1R3" gate="G$1" pin="2"/>
+<wire x1="129.54" y1="142.24" x2="139.7" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="129.54" y1="139.7" x2="129.54" y2="142.24" width="0.1524" layer="91"/>
+<junction x="129.54" y="142.24"/>
+<wire x1="129.54" y1="147.32" x2="129.54" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="142.24" x2="149.86" y2="142.24" width="0.1524" layer="91"/>
+<junction x="139.7" y="142.24"/>
+<pinref part="1C9" gate="G$1" pin="1"/>
+<wire x1="149.86" y1="142.24" x2="149.86" y2="137.16" width="0.1524" layer="91"/>
+<pinref part="SUPPLY28" gate="G$1" pin="5V"/>
 </segment>
 </net>
 </nets>
