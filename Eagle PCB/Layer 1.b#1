@@ -2972,9 +2972,9 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <attribute name="NAME" x="-43.497" y="-82.7" size="0.6096" layer="25" font="vector" ratio="20" rot="R90"/>
 <attribute name="VALUE" x="-40.068" y="-82.7" size="0.6096" layer="27" font="vector" ratio="20" rot="R90"/>
 </element>
-<element name="J1" library="Connectors" library_urn="urn:adsk.eagle:library:19813715" package="1X02_LOCK" package3d_urn="urn:adsk.eagle:package:19813850/2" value="" x="-24.9" y="-85" smashed="yes" rot="R90">
-<attribute name="NAME" x="-26.297" y="-86.27" size="0.6096" layer="25" font="vector" ratio="20" rot="R90"/>
-<attribute name="VALUE" x="-22.868" y="-86.27" size="0.6096" layer="27" font="vector" ratio="20" rot="R90"/>
+<element name="J1" library="Connectors" library_urn="urn:adsk.eagle:library:19813715" package="1X02_LOCK" package3d_urn="urn:adsk.eagle:package:19813850/2" value="" x="-113.5" y="-112.7" smashed="yes">
+<attribute name="NAME" x="-114.77" y="-111.303" size="0.6096" layer="25" font="vector" ratio="20"/>
+<attribute name="VALUE" x="-114.77" y="-114.732" size="0.6096" layer="27" font="vector" ratio="20"/>
 </element>
 </elements>
 <signals>
@@ -8127,11 +8127,10 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="-37.88" y1="-78.03" x2="-37.95" y2="-78.1" width="0.508" layer="1"/>
 <wire x1="-37.95" y1="-78.1" x2="-39.6" y2="-78.1" width="0.508" layer="1"/>
 <via x="-39.6" y="-78.1" extent="1-16" drill="0.508"/>
-<wire x1="-37.61" y1="-78.1" x2="-33.41" y2="-82.3" width="0.508" layer="16"/>
+<wire x1="-31.81" y1="-83.9" x2="-37.61" y2="-78.1" width="0.508" layer="16"/>
 <wire x1="-39.6" y1="-78.1" x2="-37.61" y2="-78.1" width="0.508" layer="16"/>
 <contactref element="J1" pad="2"/>
-<wire x1="-33.41" y1="-82.3" x2="-24.9178" y2="-82.3" width="0.508" layer="16"/>
-<wire x1="-24.9178" y1="-82.3" x2="-24.9" y2="-82.2822" width="0.508" layer="16"/>
+<wire x1="-39.6" y1="-78.1" x2="-110.7822" y2="-112.7" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="ESC_HV">
 <contactref element="R8" pad="2"/>
@@ -8154,15 +8153,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <contactref element="Q37" pad="2"/>
 <wire x1="-44.85" y1="-80.43" x2="-44.85" y2="-79.03" width="0.254" layer="1"/>
 <contactref element="J1" pad="1"/>
-<wire x1="-44.85" y1="-80.43" x2="-44.85" y2="-82.05" width="0.254" layer="1"/>
-<wire x1="-44.85" y1="-82.05" x2="-44.8" y2="-82.1" width="0.254" layer="1"/>
-<via x="-44.8" y="-82.1" extent="1-16" drill="0.508"/>
-<wire x1="-44.8" y1="-82.1" x2="-37.2322" y2="-89.6678" width="0.254" layer="16"/>
-<wire x1="-33.87" y1="-89.6678" x2="-37.2322" y2="-89.6678" width="0.254" layer="16"/>
-<wire x1="-31.8011" y1="-87.5989" x2="-33.87" y2="-89.6678" width="0.254" layer="16"/>
-<wire x1="-31.8011" y1="-86.4011" x2="-31.8011" y2="-87.5989" width="0.254" layer="16"/>
-<wire x1="-24.9" y1="-85.1778" x2="-30.5778" y2="-85.1778" width="0.254" layer="16"/>
-<wire x1="-30.5778" y1="-85.1778" x2="-31.8011" y2="-86.4011" width="0.254" layer="16"/>
+<wire x1="-44.85" y1="-80.43" x2="-113.6778" y2="-112.7" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$7">
 <contactref element="ESC_IN" pad="2"/>
