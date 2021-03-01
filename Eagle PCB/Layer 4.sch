@@ -4009,50 +4009,6 @@ USE AT YOUR OWN RISK!&lt;p&gt;
 <pinref part="GND6" gate="1" pin="GND"/>
 </segment>
 </net>
-<net name="SDA1" class="0">
-<segment>
-<wire x1="50.8" y1="149.86" x2="38.1" y2="149.86" width="0.1524" layer="91"/>
-<label x="38.1" y="149.86" size="1.778" layer="95"/>
-<pinref part="TOF1" gate="G$1" pin="SDA"/>
-</segment>
-<segment>
-<wire x1="106.68" y1="149.86" x2="93.98" y2="149.86" width="0.1524" layer="91"/>
-<label x="93.98" y="149.86" size="1.778" layer="95"/>
-<pinref part="TOF2" gate="G$1" pin="SDA"/>
-</segment>
-<segment>
-<wire x1="50.8" y1="116.84" x2="38.1" y2="116.84" width="0.1524" layer="91"/>
-<label x="38.1" y="116.84" size="1.778" layer="95"/>
-<pinref part="TOF3" gate="G$1" pin="SDA"/>
-</segment>
-<segment>
-<wire x1="106.68" y1="116.84" x2="93.98" y2="116.84" width="0.1524" layer="91"/>
-<label x="93.98" y="116.84" size="1.778" layer="95"/>
-<pinref part="TOF4" gate="G$1" pin="SDA"/>
-</segment>
-</net>
-<net name="SCL1" class="0">
-<segment>
-<wire x1="50.8" y1="147.32" x2="38.1" y2="147.32" width="0.1524" layer="91"/>
-<label x="38.1" y="147.32" size="1.778" layer="95"/>
-<pinref part="TOF1" gate="G$1" pin="SCL"/>
-</segment>
-<segment>
-<wire x1="106.68" y1="147.32" x2="93.98" y2="147.32" width="0.1524" layer="91"/>
-<label x="93.98" y="147.32" size="1.778" layer="95"/>
-<pinref part="TOF2" gate="G$1" pin="SCL"/>
-</segment>
-<segment>
-<wire x1="50.8" y1="114.3" x2="38.1" y2="114.3" width="0.1524" layer="91"/>
-<label x="38.1" y="114.3" size="1.778" layer="95"/>
-<pinref part="TOF3" gate="G$1" pin="SCL"/>
-</segment>
-<segment>
-<wire x1="106.68" y1="114.3" x2="93.98" y2="114.3" width="0.1524" layer="91"/>
-<label x="93.98" y="114.3" size="1.778" layer="95"/>
-<pinref part="TOF4" gate="G$1" pin="SCL"/>
-</segment>
-</net>
 <net name="INT1" class="0">
 <segment>
 <wire x1="76.2" y1="149.86" x2="86.36" y2="149.86" width="0.1524" layer="91"/>
@@ -4109,20 +4065,6 @@ USE AT YOUR OWN RISK!&lt;p&gt;
 <label x="137.16" y="114.3" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="SDA2" class="0">
-<segment>
-<pinref part="COMPASS" gate="G$1" pin="SDA"/>
-<wire x1="91.44" y1="81.28" x2="104.14" y2="81.28" width="0.1524" layer="91"/>
-<label x="91.44" y="81.28" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="SCL2" class="0">
-<segment>
-<pinref part="COMPASS" gate="G$1" pin="SCL"/>
-<wire x1="91.44" y1="78.74" x2="104.14" y2="78.74" width="0.1524" layer="91"/>
-<label x="91.44" y="78.74" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="3V3_SWITCH" class="0">
 <segment>
 <wire x1="50.8" y1="152.4" x2="45.72" y2="152.4" width="0.1524" layer="91"/>
@@ -4161,6 +4103,64 @@ USE AT YOUR OWN RISK!&lt;p&gt;
 <wire x1="91.44" y1="71.12" x2="104.14" y2="71.12" width="0.1524" layer="91"/>
 <label x="91.44" y="71.12" size="1.778" layer="95"/>
 <pinref part="BNO_RESET" gate="G$1" pin="2"/>
+</segment>
+</net>
+<net name="SDA1" class="0">
+<segment>
+<pinref part="TOF1" gate="G$1" pin="SDA"/>
+<wire x1="50.8" y1="149.86" x2="38.1" y2="149.86" width="0.1524" layer="91"/>
+<label x="40.64" y="149.86" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="106.68" y1="149.86" x2="93.98" y2="149.86" width="0.1524" layer="91"/>
+<pinref part="TOF2" gate="G$1" pin="SDA"/>
+<label x="96.52" y="149.86" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="TOF3" gate="G$1" pin="SDA"/>
+<wire x1="50.8" y1="116.84" x2="38.1" y2="116.84" width="0.1524" layer="91"/>
+<label x="40.64" y="116.84" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="TOF4" gate="G$1" pin="SDA"/>
+<wire x1="106.68" y1="116.84" x2="93.98" y2="116.84" width="0.1524" layer="91"/>
+<label x="96.52" y="116.84" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SCL1" class="0">
+<segment>
+<pinref part="TOF1" gate="G$1" pin="SCL"/>
+<wire x1="50.8" y1="147.32" x2="38.1" y2="147.32" width="0.1524" layer="91"/>
+<label x="40.64" y="147.32" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="106.68" y1="147.32" x2="93.98" y2="147.32" width="0.1524" layer="91"/>
+<pinref part="TOF2" gate="G$1" pin="SCL"/>
+<label x="96.52" y="147.32" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="TOF3" gate="G$1" pin="SCL"/>
+<wire x1="50.8" y1="114.3" x2="38.1" y2="114.3" width="0.1524" layer="91"/>
+<label x="40.64" y="114.3" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="TOF4" gate="G$1" pin="SCL"/>
+<wire x1="106.68" y1="114.3" x2="93.98" y2="114.3" width="0.1524" layer="91"/>
+<label x="96.52" y="114.3" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SDA2" class="0">
+<segment>
+<pinref part="COMPASS" gate="G$1" pin="SDA"/>
+<wire x1="91.44" y1="81.28" x2="104.14" y2="81.28" width="0.1524" layer="91"/>
+<label x="93.98" y="81.28" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SCL2" class="0">
+<segment>
+<pinref part="COMPASS" gate="G$1" pin="SCL"/>
+<wire x1="91.44" y1="78.74" x2="104.14" y2="78.74" width="0.1524" layer="91"/>
+<label x="93.98" y="78.74" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
